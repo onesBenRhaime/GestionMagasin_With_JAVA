@@ -1,4 +1,3 @@
-
 package tn.tuniprod.gestionmagasin.classes;
 
 import java.util.Date;
@@ -70,7 +69,6 @@ public class Produit {
         return dateExpriration;
     }
 
-
     public boolean comparerB(Produit p1, Produit p2) {
 
         if (p1.id == p2.id && p1.prix == p2.prix && p1.lib == p2.lib) {
@@ -80,7 +78,6 @@ public class Produit {
         return false;
     }
 
-   
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -98,19 +95,20 @@ public class Produit {
         }
         return true;
     }
-  public void affecterDateExpiration(Date date){
+
+    public void affecterDateExpiration(Date date) {
         this.dateExpriration = date;
     }
-       public void afficher(){
+
+    public void afficher() {
         System.out.println("------------------------");
-        System.out.println("identifiant : "+this.id);
-        System.out.println("libelle : "+this.lib);
-        System.out.println("marque : "+this.marque);
-        System.out.println("prix : "+this.prix);
+        System.out.println("identifiant : " + this.id);
+        System.out.println("libelle : " + this.lib);
+        System.out.println("marque : " + this.marque);
+        System.out.println("prix : " + this.prix);
         System.out.println("------------------------");
     }
-    
-    
+
     @Override
     public String toString() {
         String s = " ---------------------- \n";
@@ -121,18 +119,28 @@ public class Produit {
         return s;
     }
 
-    public void affecterPrix(float  price){
-        if(price>=0){
+    public void affecterPrix(float price) {
+        if (price >= 0) {
             this.prix = price;
-        }
-        else{
+        } else {
             System.out.println("le prix est négatif !!");
         }
-    }    
-    
-     public boolean comparer(Produit produit){
-        return this.id==produit.id&&
-                this.prix==produit.prix&&
-                this.lib==produit.lib;
+    }
+
+    public boolean comparer(Produit produit) {
+        return this.id == produit.id
+                && this.prix == produit.prix
+                && this.lib == produit.lib;
+    }
+    //une  méthode qui permet de déterminer pour chaque produit crée sa famille ( fruit ou légumes ou autre)
+        // tester si le produit est une instantiation de la classe  ProduitFruit ou de la classe ProduitLegume 
+    public String determinerTypeProduit() {
+        if (this instanceof ProduitFruit) {
+            return "Fruit";
+        } else if (this instanceof ProduitLegume) {
+            return "Legume";
+        }
+        return "Autre";
+
     }
 }

@@ -146,4 +146,13 @@ public class Magasin extends Produit {
         }
     }
 
+    public float calculStock() {
+        float quantiteTotale = 0;
+        for (Produit p : produits) {
+            if (p.determinerTypeProduit().equals("Fruit")) {
+                quantiteTotale = quantiteTotale + ((ProduitFruit) p).getQuantite();
+            }
+        }
+        return quantiteTotale;
+    }
 }

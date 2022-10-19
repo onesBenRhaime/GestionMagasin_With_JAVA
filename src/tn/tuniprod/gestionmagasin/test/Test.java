@@ -6,6 +6,9 @@ import tn.tuniprod.gestionmagasin.classes.Magasin;
 import tn.tuniprod.gestionmagasin.classes.Caissier;
 import tn.tuniprod.gestionmagasin.classes.Vendeur;
 import tn.tuniprod.gestionmagasin.classes.Responsable;
+import tn.tuniprod.gestionmagasin.classes.ProduitAgricole;
+import tn.tuniprod.gestionmagasin.classes.ProduitFruit;
+import tn.tuniprod.gestionmagasin.classes.ProduitLegume;
 public class Test {
 
    public static void main(String[] args) {
@@ -66,8 +69,24 @@ public class Test {
         System.out.println("-------------");
         System.out.println(carrefour);
         
+//------------------
 
+    
+        ProduitFruit p1 = new ProduitFruit(12.3f,"mars", "Fruit", 1254 ,"Fraise", "", 0);
+        ProduitFruit p2 = new ProduitFruit(50f, "juin","Fruit", 1224, "Pastèque", "", 0);
+        ProduitFruit p3 = new ProduitFruit(25.6f, "décembre","Fruit" ,7896, "Mandarine", "", 0);
+        ProduitLegume p4 = new ProduitLegume(14f, "janvier", "Légumes",8521, "Artichauts", "", 0);
+        System.out.println("/****** p1 :\n "+p1 );
+        System.out.println("/****** p4 : \n"+p4 );
+          
+         Magasin Les400gouts = new Magasin(3, "Les 400 Gouts", "Sousse");
+         Les400gouts.ajouterProduit(p1);
+           Les400gouts.ajouterProduit(p2);
+             Les400gouts.ajouterProduit(p3);
+               Les400gouts.ajouterProduit(p4);
+        
     }
-
+   
+   
 }
 
