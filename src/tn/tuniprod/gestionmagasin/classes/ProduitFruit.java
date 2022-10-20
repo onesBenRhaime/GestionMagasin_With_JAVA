@@ -12,6 +12,11 @@ public class ProduitFruit extends ProduitAgricole{
         return "ProduitFruit{" + super.toString()+'}';
     }
 
+    @Override
+    public boolean estFrais(String saison) {
+        return this.getSaison().equals(saison);
+    }
+
   
     
 }

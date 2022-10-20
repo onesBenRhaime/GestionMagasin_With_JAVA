@@ -1,6 +1,8 @@
 package tn.tuniprod.gestionmagasin.classes;
 
-public class ProduitAgricole extends Produit {
+import tn.tuniprod.gestionmagasin.interfaces.Critere;
+
+public abstract class ProduitAgricole extends Produit implements Critere{
 
     private float quantite;
     private String saison;

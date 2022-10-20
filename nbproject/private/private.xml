@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/classes/Employer.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/interfaces/Critere.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/classes/ProduitAgricole.java</file>
             <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/classes/Produit.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/classes/ProduitFruit.java</file>
             <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/classes/Magasin.java</file>
-            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/test/Test.java</file>
-            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/classes/Vendeur.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/classes/ProduitLegume.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/GestionMagasin/src/tn/tuniprod/gestionmagasin/classes/Employe.java</file>
         </group>
     </open-files>
 </project-private>
