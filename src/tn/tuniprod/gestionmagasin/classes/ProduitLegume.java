@@ -2,7 +2,7 @@ package tn.tuniprod.gestionmagasin.classes;
 
 public class ProduitLegume extends ProduitAgricole {
 
-    String[] tabMois = {"janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"};
+    String[] tabMois = {"janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre","janvier"};
 
     public ProduitLegume(float quantite, String saison, String type, int id, String lib, String marque, float prix) {
         super(quantite, saison, type, id, lib, marque, prix);
