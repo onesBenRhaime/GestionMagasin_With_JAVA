@@ -79,14 +79,28 @@ public class Magasin extends Produit {
         return produits;
     }
 
-    //Une méthode  permet d'ajouter un produit dans un magasin
-    public void ajouterProduit(Produit produit) {
-        if (this.chercher(produit)) {
-            System.out.println("Produit existant");
+//    //Une méthode  permet d'ajouter un produit dans un magasin
+//    public void ajouterProduit(Produit produit) {
+//        if (this.chercher(produit)) {
+//            System.out.println("Produit existant");
+//        } else {
+//            this.produits[capacite] = produit;
+//            this.capacite++;
+//        }
+//    }
+    public void ajouterProduit(Produit produit) throws MagasinPleinException {
+        if (this.capacite == 2) {
+            throw new MagasinPleinException(" Le magasin est pleine, impossible d'ajouter plus de produits ");
         } else {
-            this.produits[capacite] = produit;
-            this.capacite++;
+            if (this.chercher(produit)) {
+                System.out.println("Produit déja existant");
+            } else {
+                this.produits[capacite] = produit;
+                this.capacite++; 
+                System.out.println("Le produit est ajouté  avec succès");
+            }
         }
+
     }
 
     public void ajouterEmploye(Employe employe) {
@@ -149,7 +163,7 @@ public class Magasin extends Produit {
     public float calculStock() {
         float quantiteTotale = 0;
         for (Produit p : produits) {
-            if (p.determinerTypeProduit().equals("Fruit")) {
+            if ( p!=null && p.determinerTypeProduit().equals("Fruit")) {
                 quantiteTotale = quantiteTotale + ((ProduitFruit) p).getQuantite();
             }
         }

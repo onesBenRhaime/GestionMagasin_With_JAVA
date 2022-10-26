@@ -1,14 +1,12 @@
 package tn.tuniprod.gestionmagasin.classes;
 
-import tn.tuniprod.gestionmagasin.interfaces.Critere;
-
 public abstract class ProduitAgricole extends Produit implements Critere{
 
     private float quantite;
     private String saison;
     private String type;
 
-    public ProduitAgricole(float quantite, String saison, String type, int id, String lib, String marque, float prix) {
+    public ProduitAgricole(float quantite, String saison, String type, int id, String lib, String marque, float prix) throws PrixNegatifException {
         super(id, lib, marque, prix);
         this.quantite = quantite;
         this.saison = saison;

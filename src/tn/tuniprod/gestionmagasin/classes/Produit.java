@@ -14,19 +14,18 @@ public class Produit {
     public Produit() {
     }
 
-    public Produit(int id, String lib, String marque, float prix) {
+    public Produit(int id, String lib, String marque, float prix) throws PrixNegatifException{
         this.id = id;
         this.lib = lib;
         this.marque = marque;
-        this.prix = prix;
+         if(prix<0){
+            this.prix=0;
+            throw  new PrixNegatifException("impossible d'ajouter un prix négatif");
+        }
+        else{
+           this.prix = prix; 
+        }
     }
-
-    public Produit(int id, String lib, String marque) {
-        this.id = id;
-        this.lib = lib;
-        this.marque = marque;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
